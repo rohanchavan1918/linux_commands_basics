@@ -153,9 +153,28 @@ If you then open your browser and search for `http://<ip>:5555/` all files can b
 - `Ctrl + b p` -- Previous window
 
 #### Check currently running processes
+- `ps -aux`
+    This command will list all the processes running
 
+#### To kill any process
+- `kill <pid>`
+- `pkill <pid>`
+- `pkill -r <process_name>`  
 
+#### Check Memory in real time
+- `free -g`
 
-system ram
-running jobs
-kill processes
+#### Monitor CPU load in real time
+- `top`
+- Press 1 to see cores and toggle
+- press t to toggle info
+- `P` Sort according to the %CPU column.
+- `M` Sort according to the %MEM column.
+- `N` Sort according to the PID column.
+- `T` Sort according to the TIME+ column.
+- `c` To see full command.
+
+    Advanced Usage - https://www.howtogeek.com/668986/how-to-use-the-linux-top-command-and-understand-its-output/
+
+#### Check free disk space
+- `df -h`
