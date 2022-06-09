@@ -35,7 +35,7 @@ Print any text in terminal.
 ``sudo <command>``
 Run a command with superuser privileges.
 
-- grep
+- grep  
 ``grep <pattern>``
 This command is used to filter the output of another commands.
 
@@ -107,6 +107,28 @@ There are multiple Text editors which can be used in Linux, but vim and nano are
     `ctrl + o` to save file
     `ctrl + x` to close the file  
     Advanced guide - https://linuxize.com/post/how-to-use-nano-text-editor/
+
+## Important Linux files & directories
+- `/home`  
+    User home directories
+- `/root`  
+    root home directories
+- `/mnt`  
+    The typical mount point for the user-mountable devices such as floppy drives and CDROM
+- `/tmp`  
+    A standard repository for temporary files created by applications and users.
+- `/dev/null`  
+    Does nothing. Its like a black hole, once anything goes in it goes forever.
+- `/etc/crontab`  
+    A parent shell script to run commands periodically.  It invokes hourly, daily, weekly, and monthly scripts.
+- `/etc/hosts`  
+    Contains host names and their corresponding IP addresses used for name resolution whenever a DNS server is unavailable.
+- `/etc/passwd`  
+    Contains information regarding registered system users. Passwords are typically kept in a shadow file for better security.
+- `.bash_history`  
+    File which stores last 500 commands
+- `.bashrc`  
+    File which stores bash config for the user  
 
 ## Generic Scenarios
 
@@ -182,26 +204,3 @@ If you then open your browser and search for `http://<ip>:5555/` all files can b
 
 #### Check free disk space
 - `df -h`
-
-
-## Important Linux files & directories
-- `.bash_history`  
-    File which stores last 500 commands
-- `.bashrc`  
-    File which stores bash config for the user  
-- `/dev/null`  
-    Does nothing. Its like a black hole, once anything goes in it goes forever.
-- `/etc/crontab`  
-    A parent shell script to run commands periodically.  It invokes hourly, daily, weekly, and monthly scripts.
-- `/etc/hosts`  
-    Contains host names and their corresponding IP addresses used for name resolution whenever a DNS server is unavailable.
-- `/etc/passwd`  
-    Contains information regarding registered system users. Passwords are typically kept in a shadow file for better security.
-- `/home`  
-    User home directories
-- `/root`  
-    root home directories
-- `/mnt`  
-    The typical mount point for the user-mountable devices such as floppy drives and CDROM
-- `/tmp`  
-    A standard repository for temporary files created by applications and users.
