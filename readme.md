@@ -64,6 +64,15 @@ Copy a single file "file.txt" into a folder named as "files"
 `cp fi* files/`
 Copy all files starting with "fi" to folder named as "files"
 
+- mv  
+`mv <file> <destination_folder> `  
+This command is used to move a file to a specefic destination.  
+Examples - 
+`mv file.txt files/` 
+move a single file "file.txt" into a folder named as "files"  
+`mv fi* files/`
+move all files starting with "fi" to folder named as "files"
+
 
 
 ### Generic Scenarios
@@ -93,7 +102,6 @@ Filter the result to only 1 port
 ``wget <url>``
 
 
-copy paste
 delete
 delete folder
 
