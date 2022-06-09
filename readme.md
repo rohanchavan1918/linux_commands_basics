@@ -204,3 +204,11 @@ If you then open your browser and search for `http://<ip>:5555/` all files can b
 
 #### Check free disk space
 - `df -h`
+
+#### SSH Access  
+Connect to server using ssh  
+`ssh <user>@<ip>`  
+`ssh <user>@<ip> -i <path_to_pem_file>`  
+
+Transfer files using scp  
+`scp source_file_name username@destination_host:destination_folder`
