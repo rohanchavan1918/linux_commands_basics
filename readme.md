@@ -83,6 +83,10 @@ Note - This command only deletes files
 This command is used to delete the directory which is empty. To delete directories which has files inside it use the command below.  
 `rm -rf <dir_path>`
 
+- alias  
+`alias <ALIAS_NAME>="command"`  
+This command is used to create alias of a command.
+
 ## Working with Text Editors
 There are multiple Text editors which can be used in Linux, but vim and nano are the ones which are included in every distro and is a must know. VIM is also present in slim docker images, so it can also be used if you need to manually ssh into a docker container and edit any file, etc.
 
@@ -178,3 +182,26 @@ If you then open your browser and search for `http://<ip>:5555/` all files can b
 
 #### Check free disk space
 - `df -h`
+
+
+## Important Linux files & directories
+- `.bash_history`  
+    File which stores last 500 commands
+- `.bashrc`  
+    File which stores bash config for the user  
+- `/dev/null`  
+    Does nothing. Its like a black hole, once anything goes in it goes forever.
+- `/etc/crontab`  
+    A parent shell script to run commands periodically.  It invokes hourly, daily, weekly, and monthly scripts.
+- `/etc/hosts`  
+    Contains host names and their corresponding IP addresses used for name resolution whenever a DNS server is unavailable.
+- `/etc/passwd`  
+    Contains information regarding registered system users. Passwords are typically kept in a shadow file for better security.
+- `/home`  
+    User home directories
+- `/root`  
+    root home directories
+- `/mnt`  
+    The typical mount point for the user-mountable devices such as floppy drives and CDROM
+- `/tmp`  
+    A standard repository for temporary files created by applications and users.
