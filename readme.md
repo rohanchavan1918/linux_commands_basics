@@ -4,21 +4,21 @@
 
 - pwd  
 ``pwd``  
-Find the current directory. https://man7.org/linux/man-pages/man1/pwd.1.html  
+Find the current directory.
 
 - ls  
 ``ls``  
-Find the files present in the current directory. https://man7.org/linux/man-pages/man1/ls.1.html  
+Find the files present in the current directory.   
 Examples  
 ``ls folder``  
-``ls -ll`` shows all files along with permissions and timestamp and other info.
-``ls -la`` same as above but shows hidden files.  
+``ls -ll`` - shows all files along with permissions and timestamp and other info.  
+``ls -la`` - same as above but shows hidden files.  
 
 
 
 - cd  
 ``cd``
-Change the directory to another directory. https://man7.org/linux/man-pages/man1/cd.1p.html  
+Change the directory to another directory.    
 Examples  
 ``cd <directory>``  - Goto Particular sub directory  
 ``cd ..`` - Goto parent directory
@@ -129,6 +129,8 @@ There are multiple Text editors which can be used in Linux, but vim and nano are
     File which stores last 500 commands
 - `.bashrc`  
     File which stores bash config for the user  
+- `.ssh`
+    Directory where all ssh keys are typically present
 
 ## Generic Scenarios
 
