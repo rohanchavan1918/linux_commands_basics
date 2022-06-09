@@ -51,33 +51,63 @@ This command is used to install a package.
 `uname -a`  
 This command is used to find the info of the server.  
 
-- ifconfig
+- ifconfig  
 ``ifconfig``
 This commmand is used to find out the IP and available network adapters.
 
 - cp  
 `cp <file> <destination_folder> `  
 This command is used to create a copy of a file to a specefic destination.  
-Examples - 
-`cp file.txt files/` 
+Examples -  
+`cp file.txt files/`   
 Copy a single file "file.txt" into a folder named as "files"  
-`cp fi* files/`
+`cp fi* files/`  
 Copy all files starting with "fi" to folder named as "files"
 
 - mv  
 `mv <file> <destination_folder> `  
 This command is used to move a file to a specefic destination.  
-Examples - 
-`mv file.txt files/` 
+Examples  
+`mv file.txt files/`  
 move a single file "file.txt" into a folder named as "files"  
-`mv fi* files/`
+`mv fi* files/`  
 move all files starting with "fi" to folder named as "files"
 
+- rm  
+`rm <file_path>`  
+This command is used to delete the file. There's no recycle bin in linux so once this file is deleted its deleted permanently.
+Note - This command only deletes files
+
+- rmdir  
+`rmdir <directory_path>`
+This command is used to delete the directory which is empty. To delete directories which has files inside it use the command below.  
+`rm -rf <dir_path>`
+
+## Working with Text Editors
+There are multiple Text editors which can be used in Linux, but vim and nano are the ones which are included in every distro and is a must know. VIM is also present in slim docker images, so it can also be used if you need to manually ssh into a docker container and edit any file, etc.
+
+- #### VIM  
+    `vim file.txt`  
+    `vi file.txt`   
+    `i` to start insert mode in vim
+    `:w` save the current changes to a file.  
+    `:q` quits Vim. If you have unsaved changes, you will be asked whether or not you'd like to save your changes before quitting.  
+    `:q!` quit without saving unsaved changes.  
+    `:wq` save and quit.  
+
+    Advanced guide - https://web.stanford.edu/class/cs107/resources/vim.html#:~:text=vim%20has%20two%20%22modes%22%3A,and%20edit%20text%20in%20bulk.
+
+- #### NANO
+    Nano is another editor which can be used to create/edit files and folders. It is comparatively easy then VIM as there are no modes on nano.  
+    `nano file.txt`   
+    `ctrl + o` to save file
+    `ctrl + x` to close the file  
+    Advanced guide - https://linuxize.com/post/how-to-use-nano-text-editor/
+
+## Generic Scenarios
 
 
-### Generic Scenarios
-
-##### Check for open ports  
+#### Check for open ports  
 
 - If we have access to a server and can check directly with the help of a utility called as `netstat`  
 Get a list of all open ports    
@@ -88,7 +118,7 @@ Filter the result to only 1 port
 - If we dont have access to the server, we can use a utility called as `telnet` to check if the port is open.  
 `telnet <ip_addr> <port>`
 
-##### Zip unzip / untar files
+#### Zip unzip / untar files
 
 - To unzip files  
 `sudo apt-get install unzip`  
@@ -97,22 +127,35 @@ Filter the result to only 1 port
 - To untar files (tar is another compression used commonly in linux)  
 `tar xvzf file.tar.gz`  
 
-##### Download files/folders from external sources
+#### Download files/folders from external sources
 - Download files from a url  
 ``wget <url>``
 
+#### Serve files on server temperorily  
+- Many times we need to download some files from the server to our local environment, the intended way to do this is by using scp. But quick and *dirty* alternative to do this is to host a temperory file server on a particular (*higher*) port. Run this command from the directory where you want to serve the files.  
+`python3 -m http.server 5555`  
+If you then open your browser and search for `http://<ip>:5555/` all files can be visible and can be downloaded. This is most effective when you want to automate downloading files. You can use `wget` to download these files in your local enviromnent.
 
-delete
-delete folder
+#### Multiplexing your terminal window
+- `tmux` is a utility that can be used to split/divide one terminal window into multiple windows. This is very helpful when you are monitoring logs etc. It can also be used to save server sessions etc.
+
+- `ctrl + b` -- is the base command for tmux  
+- `Ctrl + b ;` -- Toggle last active pane  
+- `Ctrl + b %` -- Split pane with horizontal layout  
+- `Ctrl + b "` -- Split pane with vertical layout  
+- `Ctrl + b {` -- Move the current pane left  
+- `Ctrl + b }` -- Move the current pane right  
+- `Ctrl + b <arrow_keys>` -- set the pane 
+
+- `Ctrl + b c` -- Create window
+- `Ctrl + b ,` -- Rename current window
+- `Ctrl + b &` -- Close current window
+- `Ctrl + b p` -- Previous window
+
+#### Check currently running processes
 
 
 
-
-
-python -m runserver
-tmux
-check open ports
-vim
-nano
-netcat
-check ip
+system ram
+running jobs
+kill processes
